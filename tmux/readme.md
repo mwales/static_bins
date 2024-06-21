@@ -1,5 +1,13 @@
 # Build Instructions
 
+## Pre-requisites packages
+
+* automake
+* pkg-config
+* libevent-dev
+* bison (yacc)
+* libncurses-dev
+
 ```
 git clone https://github.com/tmux/tmux.git
 cd tmux
