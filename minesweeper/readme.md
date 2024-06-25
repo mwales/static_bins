@@ -20,7 +20,7 @@ cd Odin
 cd ..
 git clone https://github.com/gaultier/minesweeper-from-scratch
 cd minesweeper-from-scratch
-../Odin/odin build src -o:speed
+../Odin/odin build src -o:speed -extra-linker-flags:"-static"
 ```
 
 # Notes
@@ -33,3 +33,7 @@ Went to install the odin package from Ubuntu, and I assume there is a name
 collision with an existing project, so it didn't work.  So created a
 container to build odin and minesweeper in
 
+Author says it should be a 300kB statically linked executable, but the
+instructions from the git repo built a 177kB dynamic executable. After adding
+the build option to statically link the final application, we were able to 
+create a 859 kB static ELF after we ran strip on it.
